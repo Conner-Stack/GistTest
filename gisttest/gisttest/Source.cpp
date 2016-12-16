@@ -9,24 +9,29 @@ int main()
 	int *evn = new int[5];
 	even(evn, 5);
 
-	
 	//test case question 3
 	char rev[20] = "wuteven";
 	reverse(rev);
 
 	//test case question 4
 	Cat cat[26];
+	
+	char letter = 'A';
 	int i = 0;
-	int ascii = 63;
+	
 	while (i < 26)
 	{
-		if (i % 2 == 0)
+		if (letter > 97)
 		{
-			cat[i] = cat->NameMe((char)ascii + 2);
+			cat[i].NameMe(letter);
+			letter += 33;
+			i++;
 		}
-		else if (i % 2 == 1)
+		if (letter < 97)
 		{
-			
+			cat[i].NameMe(letter);
+			letter -= 31;
+			i++;
 		}
 	}
 
